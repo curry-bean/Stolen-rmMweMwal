@@ -1,0 +1,139 @@
+/*
+** MabryPro-Black
+*/
+
+@font-face {
+    font-family: 'Mabry Pro';
+    src: url('../fonts/MabryPro-Black/MabryPro-Black.eot');
+    src: url('../fonts/MabryPro-Black/MabryPro-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MabryPro-Black/MabryPro-Black.woff2') format('woff2'),
+        url('../fonts/MabryPro-Black/MabryPro-Black.woff') format('woff'),
+        url('../fonts/MabryPro-Black/MabryPro-Black.ttf') format('truetype'),
+        url('../fonts/MabryPro-Black/MabryPro-Black.svg#MabryPro-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mabry Pro';
+    src: url('../fonts/MabryPro-Black/MabryPro-BlackItalic.eot');
+    src: url('../fonts/MabryPro-Black/MabryPro-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MabryPro-Black/MabryPro-BlackItalic.woff2') format('woff2'),
+        url('../fonts/MabryPro-Black/MabryPro-BlackItalic.woff') format('woff'),
+        url('../fonts/MabryPro-Black/MabryPro-BlackItalic.ttf') format('truetype'),
+        url('../fonts/MabryPro-Black/MabryPro-BlackItalic.svg#MabryPro-BlackItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+}
+
+/*
+** MabryPro-Bold
+*/
+
+@font-face {
+    font-family: 'Mabry Pro';
+    src: url('../fonts/MabryPro-Bold/MabryPro-Bold.eot');
+    src: url('../fonts/MabryPro-Bold/MabryPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MabryPro-Bold/MabryPro-Bold.woff2') format('woff2'),
+        url('../fonts/MabryPro-Bold/MabryPro-Bold.woff') format('woff'),
+        url('../fonts/MabryPro-Bold/MabryPro-Bold.ttf') format('truetype'),
+        url('../fonts/MabryPro-Bold/MabryPro-Bold.svg#MabryPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mabry Pro';
+    src: url('../fonts/MabryPro-Bold/MabryPro-BoldItalic.eot');
+    src: url('../fonts/MabryPro-Bold/MabryPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MabryPro-Bold/MabryPro-BoldItalic.woff2') format('woff2'),
+        url('../fonts/MabryPro-Bold/MabryPro-BoldItalic.woff') format('woff'),
+        url('../fonts/MabryPro-Bold/MabryPro-BoldItalic.ttf') format('truetype'),
+        url('../fonts/MabryPro-Bold/MabryPro-BoldItalic.svg#MabryPro-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*
+** MabryPro-Medium
+*/
+
+@font-face {
+    font-family: 'Mabry Pro';
+    src: url('../fonts/MabryPro-Medium/MabryPro-Medium.eot');
+    src: url('../fonts/MabryPro-Medium/MabryPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MabryPro-Medium/MabryPro-Medium.woff2') format('woff2'),
+        url('../fonts/MabryPro-Medium/MabryPro-Medium.woff') format('woff'),
+        url('../fonts/MabryPro-Medium/MabryPro-Medium.ttf') format('truetype'),
+        url('../fonts/MabryPro-Medium/MabryPro-Medium.svg#MabryPro-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mabry Pro';
+    src: url('../fonts/MabryPro-Medium/MabryPro-MediumItalic.eot');
+    src: url('../fonts/MabryPro-Medium/MabryPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MabryPro-Medium/MabryPro-MediumItalic.woff2') format('woff2'),
+        url('../fonts/MabryPro-Medium/MabryPro-MediumItalic.woff') format('woff'),
+        url('../fonts/MabryPro-Medium/MabryPro-MediumItalic.ttf') format('truetype'),
+        url('../fonts/MabryPro-Medium/MabryPro-MediumItalic.svg#MabryPro-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/*
+** MabryPro-Regular
+*/
+
+@font-face {
+    font-family: 'Mabry Pro';
+    src: url('../fonts/MabryPro-Regular/MabryPro-Italic.eot');
+    src: url('../fonts/MabryPro-Regular/MabryPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MabryPro-Regular/MabryPro-Regular.woff2') format('woff2'),
+        url('../fonts/MabryPro-Regular/MabryPro-Regular.woff') format('woff'),
+        url('../fonts/MabryPro-Regular/MabryPro-Regular.ttf') format('truetype'),
+        url('../fonts/MabryPro-Regular/MabryPro-Regular.svg#MabryPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mabry Pro';
+    src: url('../fonts/MabryPro-Regular/MabryPro-Italic.eot');
+    src: url('../fonts/MabryPro-Regular/MabryPro-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MabryPro-Regular/MabryPro-Italic.woff2') format('woff2'),
+        url('../fonts/MabryPro-Regular/MabryPro-Italic.woff') format('woff'),
+        url('../fonts/MabryPro-Regular/MabryPro-Italic.ttf') format('truetype'),
+        url('../fonts/MabryPro-Regular/MabryPro-Italic.svg#MabryPro-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/*
+** MabryPro-Light
+*/
+
+@font-face {
+    font-family: 'Mabry Pro';
+    src: url('../fonts/MabryPro-Light/MabryPro-Light.eot');
+    src: url('../fonts/MabryPro-Light/MabryPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MabryPro-Light/MabryPro-Light.woff2') format('woff2'),
+        url('../fonts/MabryPro-Light/MabryPro-Light.woff') format('woff'),
+        url('../fonts/MabryPro-Light/MabryPro-Light.ttf') format('truetype'),
+        url('../fonts/MabryPro-Light/MabryPro-Light.svg#MabryPro-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mabry Pro';
+    src: url('../fonts/MabryPro-Light/MabryPro-LightItalic.eot');
+    src: url('../fonts/MabryPro-Light/MabryPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MabryPro-Light/MabryPro-LightItalic.woff2') format('woff2'),
+        url('../fonts/MabryPro-Light/MabryPro-LightItalic.woff') format('woff'),
+        url('../fonts/MabryPro-Light/MabryPro-LightItalic.ttf') format('truetype'),
+        url('../fonts/MabryPro-Light/MabryPro-LightItalic.svg#MabryPro-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
