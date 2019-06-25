@@ -28,9 +28,19 @@ function initEvents()
 
 function onWindowResize()
 {
-    camera.aspect = window.innerWidth / window.innerHeight;
+    halfWidth = window.innerWidth / 2;
+    width = window.innerWidth;
+    halfHeight = window.innerHeight / 2;
+    height = window.innerHeight;
+
+    camera.left = - halfWidth;
+    camera.right = halfWidth;
+    camera.top = halfHeight;
+    camera.bottom = - halfHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(width, height);
+
+    return ;
 }
 
 /*
