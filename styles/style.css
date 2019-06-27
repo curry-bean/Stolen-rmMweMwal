@@ -8,6 +8,7 @@
 	--tertiary-color: #7A7A7A;
 	--background-color: #F6F6F6;
 	--debug-color: rgba(255, 0, 0, 0.);
+	--shadow-color: #B7B7B7;
 }
 
 /*
@@ -21,7 +22,7 @@
 	font-style: normal;
 	text-decoration: none;
 	color: black;
-	z-index: 1;
+	z-index: 0;
 }
 
 /*
@@ -60,20 +61,22 @@ h1 {
 	line-height: 2.4rem;
 }
 
+h2 {
+	font-size: 24px;
+	font-weight: bold;
+}
+
 /**/ 
 
 address {
 	display: flex;
 	flex-wrap: wrap;
 	font-size: 16px;
+	text-align: right;
 }
 
 address span:last-child {
 	margin-left: 2.4rem;
-}
-
-address span a:first-child {
-	letter-spacing: 0.03rem;
 }
 
 address span a {
@@ -90,6 +93,7 @@ main {
 	flex: auto;
 	flex-direction: column;
 	justify-content: space-around;
+	z-index: 1;
 }
 
 /**/
@@ -134,6 +138,79 @@ main p strong {
 **
 */
 
+aside
+{
+	background-color: var(--background-color);
+	position: absolute;
+	right: 0;
+	height: 100vh;
+	overflow: scroll;
+	box-shadow: 0rem 0rem 2.4rem 0rem var(--shadow-color);
+}
+
+aside article
+{
+	margin: 4.8rem 9.6rem 4.8rem 4.8rem;
+}
+
+aside article h2
+{
+	margin-bottom: 1.6rem;
+}
+
+aside article ol
+{
+	margin-bottom: 2.4rem;
+	list-style-type: none;
+	font-size: 20px;
+	line-height: 20px;
+}
+
+aside ol li
+{
+	margin: 0rem 0rem 0.8rem 1.6rem;
+	list-style-type: none;
+	font-weight: 400;
+}
+
+aside ol li strong
+{
+	font-weight: 500;
+}
+
+aside ol li span
+{
+	font-size: 16px;
+	font-weight: 400;
+}
+
+aside ul
+{
+	list-style: none;
+	font-size: 20px;
+	font-weight: 500;
+	display: flex;
+}
+
+aside ul div:first-child
+{
+	margin-left: 1.6rem;
+}
+
+aside ul div
+{
+	margin-left: 3.6rem;
+}
+
+aside ul div li
+{
+	line-height: 34px;
+}
+
+/*
+**
+*/
+
 footer {
 	margin: 1.6rem 9.6rem 4.8rem 9.6rem;
 	display: flex;
@@ -166,10 +243,11 @@ footer p a {
 	text-align: center;
 }
 
-#container {
+#container
+{
 	width: 100vw;
 	height: 100vh;
 	position: absolute;
 	background-color: var(--background-color);
-	z-index: 0;
+	z-index: -1;
 }

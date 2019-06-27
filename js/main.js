@@ -36,6 +36,16 @@ renderer.gammaOutput = true;
 
 //
 
+/*
+var renderPass = new THREE.RenderPass(scene, camera);
+
+var composer = new THREE.EffectComposer(renderer);
+composer.setSize(width, height);
+composer.addPass(renderPass);
+*/
+
+//
+
 var container = document.getElementById("container");
 container.appendChild(renderer.domElement);
 
