@@ -1,27 +1,34 @@
 /*
-**
+** Animate scene function
 */
 
-function animate()
+function animScene()
 {
-    requestAnimationFrame(animate);
+    // Get current frame
 
-    // Change shadows geometry through the euler rotation matrix
+    requestAnimationFrame(animScene);
+
+    // Orient cylinder to look at target coordinates
+
+    cylinder.lookAt(target);
+
+    // Change cylinder shadow geometry using the euler rotation matrix
 
     var euler = new THREE.Euler(cylinder.rotation.x, cylinder.rotation.y, cylinder.rotation.z);
     var eulerMatrix = new THREE.Matrix4().makeRotationFromEuler(euler);
     cylinderShadow.geometry.applyMatrix(eulerMatrix);
 
-    // Write stats in console
+    // Log cylinder orientation in console
 
     console.log(
         "angle = [" + Math.round(cylinder.rotation.x / PI * 180) + "°, " + Math.round(cylinder.rotation.y / PI * 180) + "°, " + Math.round(cylinder.rotation.z / PI * 180) + "°];"
     );
 
-    renderer.render(scene, camera);
-    stats.update();
+    // Render the scene
 
-    // Reset shadows geometry through the euler rotation inverse matrix
+    renderer.render(scene, camera);
+
+    // Reset shadows geometry using the euler rotation inverse matrix
 
     cylinderShadow.geometry.applyMatrix(new THREE.Matrix4().getInverse(eulerMatrix));
 }

@@ -5,7 +5,7 @@
 
     <!-- Informations -->
     <meta charset="UTF-8" />
-    <title>Hugo Bruvry</title>
+    <title>Hugo Bruvry - Developer</title>
 
     <!-- Styles -->
     <link rel="stylesheet" href="./styles/fonts.css" type="text/css" />
@@ -55,57 +55,50 @@
     <main>
 
         <!-- About -->
-        <p>
-            Hi&thinsp;! I’m a 25 y/o creative developper,<br>
-            convinced that <strong>design and programming</strong><br>
-            are one. I push the technical bundaries<br>
-            to elevate ideas and raise aestethics.<br>
-            → <a href="https://vimeo.com/" class="button">demoreel</a>
+        <p id="about">
+            Hi&thinsp;! I’m Hugo Bruvry, a 25 y/o creative coder,<br />
+            convinced that <strong>design and programming</strong> are one<br />
+            and the same. I push the technical bundaries<br />
+            to raise ideas and explore generative aestethics.<br />
+            → <a href="https://vimeo.com/" id="reel-button">Demoreel</a>
         </p>
 
         <!-- Resume -->
-        <aside>
-            <article>
-                <h2>Employment</h2>
-                <ol>
-                    <li><strong>Creative Developper freelance</strong>, Paris<br>
-                        <span>2017 – Present</span></li>
-                    <li><strong>Motion Designer at Biscuit Studio</strong>, Paris<br>
-                        <span>October 2015 – May 2017</span></li>
-                    <li><strong>Scenographer at Polygraphik</strong>, Lille<br>
-                        <span>May 2015 – August 2015</span></li>
-                </ol>
+        <aside id="resume">
+            <h2>Employment</h2>
+            <ol>
+                <li><strong>Creative Coder Freelance</strong>, Paris<br />
+                    <span>2017 – Present</span></li>
+                <li><strong>Motion Designer at Biscuit Studio</strong>, Paris<br />
+                    <span>October 2015 – May 2017</span></li>
+                <li><strong>Scenographer at Polygraphik</strong>, Lille<br />
+                    <span>May 2015 – August 2015</span></li>
+            </ol>
 
-                <h2>Education</h2>
-                <ol>
-                    <li><strong>Level 8.15, 42 School</strong>, Paris<br>
-                        <span>November 2018 – Present</span></li>
-                    <li><strong>Master's degree, e-artsup</strong>, Nantes<br>
-                        <span>October 2012 – July 2017</span></li>
-                    <li><strong>High-School Degree, Jean-Macé</strong>, Rennes<br>
-                        <span>September 2010 – July 2012</span></li>
-                </ol>
+            <h2>Knowledge</h2>
+            <ul>
+                <li><span>Languages</span>C, JavaScript, HTML/CSS, Processing</li>
+                <li><span>Frameworks</span>Three.js, Anime.js, P5.js, Matter.js</li>
+                <li><span>Softwares</span>Adobe CC Suite, Cinema 4D, Sketch, Git<br />
+                    <span></span>TouchDesigner and Unity (soon) </li>
+            </ul>
 
-                <h2>Knowledge</h2>
-                <ul>
-                    <div>
-                        <li>Adobe CC Suite</li>
-                        <li>Cinema 4D</li>
-                        <li>HTML5&thinsp;/&thinsp;CSS</li>
-                        <li>JavaScript</li>
-                    </div>
-                    <div>
-                        <li>Three.js</li>
-                        <li>Processing</li>
-                        <li>Arduino</li>
-                        <li>C language</li>
-                    </div>
-                </ul>
-            </article>
+            <h2>Education</h2>
+            <ol>
+                <li><strong>Level 8.15, 42 School</strong>, Paris<br />
+                    <span>November 2018 – Present</span></li>
+                <li><strong>Master's degree, e-artsup</strong>, Nantes<br />
+                    <span>October 2012 – July 2017</span></li>
+                <li><strong>High-School Degree, Jean-Macé</strong>, Rennes<br />
+                    <span>September 2010 – July 2012</span></li>
+            </ol>
+        
+            <h2>Agences</h2>
+            <p>
+                Havas, Babel, Dragon Rouge, Yodog, Ditto, Agence W… 
+            </p>
         </aside>
     </main>
-
-
 
 <!-- *********************************************************************** -->
 
@@ -119,7 +112,7 @@
             <a href="https://www.instagram.com/">Instagram</a> 
             &amp; <a href="https://www.github.com/">Github</a>.
         </p>
-        <a href="https://vimeo.com/" id="cv">cv</a>
+        <p id="resume-button">CV</p>
 
     </footer>
 
@@ -130,12 +123,12 @@
 
     <!-- Scripts -->
 
-    <script src="./js/initLights.js" type="text/javascript"></script>
-    <script src="./js/initCylinder.js" type="text/javascript"></script>
-    <script src="./js/initWall.js" type="text/javascript"></script>
-    <script src="./js/initEvents.js" type="text/javascript"></script>
-    <script src="./js/initScene.js" type="text/javascript"></script>
-    <script src="./js/animate.js" type="text/javascript"></script>
+    <script src="./js/scene/initLights.js" type="text/javascript"></script>
+    <script src="./js/scene/addCylinder.js" type="text/javascript"></script>
+    <script src="./js/scene/addWall.js" type="text/javascript"></script>
+    <script src="./js/scene/initEvents.js" type="text/javascript"></script>
+    <script src="./js/scene/initScene.js" type="text/javascript"></script>
+    <script src="./js/scene/animScene.js" type="text/javascript"></script>
     <script src="./js/main.js" type="text/javascript"></script>
 
 </body>

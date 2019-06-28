@@ -2,12 +2,6 @@
 ** Declare global variables
 */
 
-// Declare trigonometric variables
-
-var halfPI = Math.PI / 2;
-var PI = Math.PI;
-var TAU = 2 * Math.PI;
-
 // Declare window size variables
 
 var halfWidth = window.innerWidth / 2;
@@ -15,46 +9,64 @@ var width = window.innerWidth;
 var halfHeight = window.innerHeight / 2;
 var height = window.innerHeight;
 
-/*
-** Declare three.js essential variables
-*/
-
-var camera = new THREE.OrthographicCamera(- halfWidth, halfWidth, halfHeight, - halfHeight, 0, 2400);
-var scene = new THREE.Scene();
-
-// Declare renderer variable
-
-var renderer = new THREE.WebGLRenderer({antialias: true});
-
-renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth, window.innerHeight);
-
-renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-renderer.gammaInput = true;
-renderer.gammaOutput = true;
-
 //
 
-/*
-var renderPass = new THREE.RenderPass(scene, camera);
+var resume = document.getElementById("resume");
+var resumeButton = document.getElementById("resume-button");
+var resumeActive = false;
+resumeButton.addEventListener("click", onResumeButtonClick);
 
-var composer = new THREE.EffectComposer(renderer);
-composer.setSize(width, height);
-composer.addPass(renderPass);
-*/
+function onResumeButtonClick()
+{
+    if (!resumeActive)
+    {
+        resumeActive = true;
+        resumeButton.innerHTML = "✕";
+        resume.style.right = "0";
+        return ;
+    }
 
-//
+    resumeActive = false;
+    resumeButton.innerHTML = "CV";
+    resume.style.right = "-100vh";
+}
+
+// Declare container element
 
 var container = document.getElementById("container");
-container.appendChild(renderer.domElement);
 
-//
+/*
+** Check WebGL, then initialize and animate scenes
+*/
 
-var stats = new Stats();
-container.appendChild(stats.dom);
+if (WEBGL.isWebGLAvailable())
+{
+    // Declare scene essential variables
 
-//
+    var camera = new THREE.OrthographicCamera(- halfWidth, halfWidth, halfHeight, - halfHeight, -800, 2400);
+    var scene = new THREE.Scene();
 
-initScene();
-animate();
+    // Declare renderer variable
+
+    var renderer = new THREE.WebGLRenderer({antialias: true});
+
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(width, height);
+
+    renderer.gammaInput = true;
+    renderer.gammaOutput = true;
+
+    // Declare scene container element
+
+    container.appendChild(renderer.domElement);
+
+    // Initialize and animate scenes
+
+    initScene();
+    animScene();
+}
+else
+{
+    container.appendChild(WEBGL.getWebGLErrorMessage());
+}
+
