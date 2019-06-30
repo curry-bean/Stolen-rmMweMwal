@@ -18,6 +18,9 @@ var resumeButton = document.getElementById("resume-button-en");
 var flagEn = document.getElementById("flag-en");
 var flagFr = document.getElementById("flag-fr");
 
+var frenchClasses = document.querySelectorAll('.fr');
+var englishClasses = document.querySelectorAll('.en');
+
 flagFr.addEventListener("click", function() {
     french = true;
     
@@ -38,9 +41,6 @@ flagEn.addEventListener("click", function() {
         englishClasses[i].style.display = "initial";
     }
 });
-
-var frenchClasses = document.querySelectorAll('.fr');
-var englishClasses = document.querySelectorAll('.en');
 
 var demoreel = document.getElementById("reel");
 var resume = document.getElementById("resume");

@@ -36,7 +36,7 @@ h1 strong {
 			animation: 0.5s ease-in-out 0.125s slideIn forwards;
 }
 
-p {
+address, p, img{
 	opacity: 0;
 	-webkit-animation: 0.5s ease-in-out 0.25s opacityIn forwards;
 			animation: 0.5s ease-in-out 0.25s opacityIn forwards;

@@ -406,3 +406,7 @@ h2 {
 .fr {
 	display: none;
 }
+
+.en {
+	display: initial;
+}
