@@ -93,6 +93,10 @@ function onMouseMove(e)
         // Set target position to its intersection coordinates
 
         target = intersects[0].point;
+
+        // Orient cylinder to look at target coordinates
+
+        cylinder.lookAt(target);
     }
 
     return ;

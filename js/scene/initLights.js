@@ -36,7 +36,7 @@ function initSpotLight()
 {
     // Create a spot light
 
-    var light = new THREE.SpotLight(0xF6F6F6, 1.0);
+    var light = new THREE.SpotLight(0xFFFFFF, 1.0);
 
     // Set light position, orientation and projection
 

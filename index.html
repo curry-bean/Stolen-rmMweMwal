@@ -9,33 +9,55 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="./styles/fonts.css" type="text/css" />
-	<link rel="stylesheet" href="./styles/style.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/style.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/animation.css" type="text/css" />
     <link rel="stylesheet" href="./styles/responsive.css" type="text/css" />
+    
     
     <!-- Three files -->
     <script src="./librairies/WebGL/WebGL.js"></script>
     <script src="./librairies/ThreeJS/three.js"></script>
-
-    <script src="./librairies/ThreeJS/EffectComposer.js"></script>
-    <script src="./librairies/ThreeJS/CopyShader.js"></script>
-    <script src="./librairies/ThreeJS/RenderPass.js"></script>
-    <script src="./librairies/ThreeJS/ShaderPass.js"></script>
-    <script src="./librairies/ThreeJS/FilmPass.js"></script>
-    <script src="./librairies/ThreeJS/FilmShader.js"></script>
-    <script src="./librairies/ThreeJS/UnrealBloomPass.js"></script>
-
-    <script src="./librairies/ThreeJS/OrbitControls.js"></script>
     <script src="./librairies/ThreeJS/OBJLoader.js"></script>
-	<script src="./librairies/ThreeJS/stats.min.js"></script>
+    <script src="./librairies/ThreeJS/stats.min.js"></script>
+
+    <script>
+        function runScene() {
+            /*
+            ** Check WebGL, then initialize and animate scenes
+            */
+
+            if (WEBGL.isWebGLAvailable())
+            {
+                renderer.setPixelRatio(window.devicePixelRatio);
+                renderer.setSize(width, height);
+
+                renderer.gammaInput = true;
+                renderer.gammaOutput = true;
+
+                // Declare scene container element
+
+                container.appendChild(renderer.domElement);
+
+                // Initialize and animate scenes
+
+                initScene();
+                animScene();
+            }
+            else
+            {
+                container.appendChild(WEBGL.getWebGLErrorMessage());
+            }
+        }
+    </script>
 </head>
 
 <!-- *********************************************************************** -->
 
-<body>
+<body onload="runScene()">
 
     <!-- Header -->
 	<header>
-        <h1>Hugo Bruvry</h1>
+        <h1><span>Hugo</span> <strong>Bruvry</strong></h1>
 
         <!-- Contact -->
 		<address>
@@ -43,10 +65,10 @@
                 100 bd. de Belleville<br />
                 75020 Paris
             </span>
-            <span>
+            <strong>
                 <a href="mailto:hugo.bruvry@gmail.com">hugo.bruvry@gmail.com</a><br />
                 <a href="tel:0787574891">+33&thinsp;(0)7&thinsp;87&thinsp;57&thinsp;48&thinsp;91</a>
-            </span>
+            </strong>
         </address>
     </header>
 
@@ -55,66 +77,108 @@
     <main>
 
         <!-- About -->
-        <p id="about">
-            Hi&thinsp;! I’m Hugo Bruvry, a 25 y/o creative coder,<br />
-            convinced that <strong>design and programming</strong> are one<br />
-            and the same. I push the technical bundaries<br />
-            to raise ideas and explore generative aestethics.<br />
-            → <a href="https://vimeo.com/" id="reel-button">Demoreel</a>
+        <p id="about" class="en">
+            Hello&thinsp;! I’m creative coder and motion designer,<br />
+            convinced that <strong>design</strong><strong>&nbsp;and&nbsp;</strong><strong>programming</strong>*<br />
+            influence each other, I push the technical<br />
+            limits to raise ideas and explore new aestethics.<br />
+            <span id="buttons-en">
+                <span id="demoreel-button-en" class="button">Demoreel</span>
+                <span id="resume-button-en" class="button">Resume</span>
+            </span>
         </p>
 
-        <!-- Resume -->
-        <aside id="resume">
-            <h2>Employment</h2>
-            <ol>
-                <li><strong>Creative Coder Freelance</strong>, Paris<br />
-                    <span>2017 – Present</span></li>
-                <li><strong>Motion Designer at Biscuit Studio</strong>, Paris<br />
-                    <span>October 2015 – May 2017</span></li>
-                <li><strong>Scenographer at Polygraphik</strong>, Lille<br />
-                    <span>May 2015 – August 2015</span></li>
-            </ol>
-
-            <h2>Knowledge</h2>
-            <ul>
-                <li><span>Languages</span>C, JavaScript, HTML/CSS, Processing</li>
-                <li><span>Frameworks</span>Three.js, Anime.js, P5.js, Matter.js</li>
-                <li><span>Softwares</span>Adobe CC Suite, Cinema 4D, Sketch, Git<br />
-                    <span></span>TouchDesigner and Unity (soon) </li>
-            </ul>
-
-            <h2>Education</h2>
-            <ol>
-                <li><strong>Level 8.15, 42 School</strong>, Paris<br />
-                    <span>November 2018 – Present</span></li>
-                <li><strong>Master's degree, e-artsup</strong>, Nantes<br />
-                    <span>October 2012 – July 2017</span></li>
-                <li><strong>High-School Degree, Jean-Macé</strong>, Rennes<br />
-                    <span>September 2010 – July 2012</span></li>
-            </ol>
-        
-            <h2>Agences</h2>
-            <p>
-                Havas, Babel, Dragon Rouge, Yodog, Ditto, Agence W… 
-            </p>
-        </aside>
+        <p id="about" class="fr">
+            Hello&thinsp;! Je suis développeur et animateur,<br />
+            convaincu que <strong>design</strong><strong>&nbsp;et&nbsp;</strong><strong>programmation</strong>*<br />
+            s'influencent l'un l'autre, je m'affranchis de la<br />
+            technique pour aller au bout de mes idées<br />
+            et explorer de nouvelles esthétiques.<br />
+            <span id="buttons-fr">
+                <span id="demoreel-button-fr" class="button">Demoreel</span>
+                <span id="resume-button-fr" class="button">CV</span>
+            </span>
+        </p>
     </main>
 
 <!-- *********************************************************************** -->
 
     <!-- Footer -->
     <footer>
-
         <!-- Social -->
-        <p>
+        <p class="en">
             *My portfolio is coming soon.<br />
-            Follow me on <a href="https://vimeo.com/">Vimeo</a>, 
-            <a href="https://www.instagram.com/">Instagram</a> 
-            &amp; <a href="https://www.github.com/">Github</a>.
+            Follow me on <a href="https://vimeo.com/hugobruvry/">Vimeo</a>, 
+            <a href="https://www.instagram.com/hugo.bruvry/">Instagram</a> 
+            &amp; <a href="https://github.com/hbruvry/">Github</a>.
         </p>
-        <p id="resume-button">CV</p>
-
+        <p class="fr">
+            *Mon portfolio arrive.<br />
+            Suivez moi sur <a href="https://vimeo.com/hugobruvry/">Vimeo</a>, 
+            <a href="https://www.instagram.com/hugo.bruvry/">Instagram</a> 
+            &amp; <a href="https://github.com/hbruvry/">Github</a>.
+        </p>
+        <!-- Language -->
+        <span id="language-picker">
+            <img src="./img/flags/flag-en.svg" alt="flag-en" id="flag-en" />|
+            <img src="./img/flags/flag-fr.svg" alt="flag-fr" id="flag-fr" />
+        </span>
     </footer>
+
+    <!-- *********************************************************************** -->
+
+        <span id="close-button" class="circular-button">✕</span>
+
+        <div id="opacity-filter"></div>
+
+        <!-- Resume -->
+        <aside id="resume">
+            <article>
+                <h2>Employment</h2>
+                <ol>
+                    <li>Creative Coder, Freelance, Paris<br />
+                        <span>2017 – Present</span></li>
+                    <li><a href="https://www.biscuit-studio.com/">Motion Designer at <strong>Biscuit Studio</strong></a>, Paris<br />
+                        <span>October 2015 – May 2017</span></li>
+                    <li><a href="http://polygraphik.com/">Scenographer at <strong>Polygraphik</strong></a>, Lille<br />
+                        <span>May 2015 – August 2015</span></li>
+                </ol>
+
+                <h2>Knowledge</h2>
+                <ul>
+                    <li><span>Languages</span>C, JavaScript, HTML/CSS, Processing</li>
+                    <li><span>Frameworks</span>Three.js, Anime.js, P5.js, Matter.js</li>
+                    <li><span>Softwares</span>Adobe CC Suite, Cinema 4D, Sketch, Git</li>
+                    <li><span>Learning</span>TouchDesigner, Unity, VVVV</li>
+                </ul>
+
+                <h2>Education</h2>
+                <ol>
+                    <li><a href="https://www.42.fr/">Level 8.15, <strong>42 School</strong></a>, Paris<br />
+                        <span>November 2018 – Present</span></li>
+                    <li><a href="https://www.e-artsup.net/">Master's degree, <strong>e-artsup</strong></a>, Nantes<br />
+                        <span>October 2012 – July 2017</span></li>
+                    <li>High-School Degree, Jean-Macé, Rennes<br />
+                        <span>September 2010 – July 2012</span></li>
+                </ol>
+            
+                <h2>Clients</h2>
+                <p>
+                    CNED, Ditto, LVMH, Martell, Mutuelle Générale,
+                    Sobieski, Sodexo, Terega, Engie, Air France…
+                </p>
+
+                <h2>Agences</h2>
+                <p>
+                    Havas, Babel, Dragon Rouge, Yodog, Agence W… 
+                </p>
+            </article>
+        </aside>
+        
+        <div id="reel">
+            <iframe src="https://player.vimeo.com/video/236240897?color=FFFFFF&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
 
 <!-- *********************************************************************** -->
 
@@ -122,7 +186,6 @@
     <div id="container"></div>
 
     <!-- Scripts -->
-
     <script src="./js/scene/initLights.js" type="text/javascript"></script>
     <script src="./js/scene/addCylinder.js" type="text/javascript"></script>
     <script src="./js/scene/addWall.js" type="text/javascript"></script>
