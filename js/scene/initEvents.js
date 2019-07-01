@@ -56,6 +56,7 @@ function onWindowResize()
     camera.right = halfWidth;
     camera.top = halfHeight;
     camera.bottom = - halfHeight;
+
     camera.updateProjectionMatrix();
 
     // Update renderer size
@@ -93,10 +94,6 @@ function onMouseMove(e)
         // Set target position to its intersection coordinates
 
         target = intersects[0].point;
-
-        // Orient cylinder to look at target coordinates
-
-        cylinder.lookAt(target);
     }
 
     return ;

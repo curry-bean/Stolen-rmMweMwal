@@ -10,9 +10,11 @@
 	--tertiary-color: #101010;
 	--light-tertiary-color: #585858;
 	--background-color: #F5F5F5;
-	--shadow-color: rgba(0, 0, 0, 0.4);
-	--debug-color: rgba(0, 255, 0, 0);
+	--shadow-color: rgba(16, 16, 16, 0.4);
+	--debug-color: rgba(255, 0, 0, 0.0);
 }
+
+/* ************************************************************************** */
 
 /*
 ** Global style
@@ -21,21 +23,16 @@
 * {
 	margin: 0;
 	padding: 0;
+	z-index: 0;
 	font-family: 'Mabry Pro', sans-serif;
 	font-style: normal;
 	text-decoration: none;
 	color: var(--tertiary-color);
-	z-index: 0;
-}
-
-/*
-** Debug style
-*/
-
-header, main, footer, div, h1, h2, h3, p, span, strong, ol, ul, li, a {
 	background-color: var(--debug-color);
-	transition: all 0.25s ease-out;
+	transition: all 0.125s ease-out;
 }
+
+/* ************************************************************************** */
 
 /*
 ** Body style
@@ -47,6 +44,8 @@ body {
 	flex-direction: column;
 	overflow: hidden;
 }
+
+/* ************************************************************************** */
 
 /*
 ** Header style
@@ -64,8 +63,8 @@ header {
 	h1 {
 		font-size: 2.074rem;
 		font-weight: bold;
-		overflow: hidden;
 		line-height: 2.75rem;
+		overflow: hidden;
 	}
 
 	h1 span {
@@ -82,9 +81,9 @@ header {
 	address {
 		display: flex;
 		flex-wrap: wrap;
-		font-size: 1.000rem;
-		width: 22rem;
 		justify-content: space-between;
+		width: 22rem;
+		font-size: 1.000rem;
 	}
 
 	address strong a {
@@ -94,6 +93,8 @@ header {
 	address strong a:hover {
 		color: var(--light-tertiary-color);
 	}
+
+/* ************************************************************************** */
 
 /*
 ** Main style
@@ -107,24 +108,23 @@ main {
 	justify-content: space-around;
 }
 
-/* About style */
+	/* About style */
 
-#about {
-	margin-left: 3.25rem;
-	font-size: 1.440rem;
-	font-weight: 500;
-	max-width: 32.5rem;
-}
+	#about {
+		margin-left: 3.25rem;
+		max-width: 32.5rem;
+		font-size: 1.440rem;
+		font-weight: 500;
+	}
 
-#about strong {
-	font-weight: 500;
-	line-height: 1.5rem;
-	text-shadow:
-		 2px   1px	var(--background-color),
-		-2px   1px	var(--background-color);
-	border-bottom: 2px solid var(--primary-color);
-	display: inline-block;
-}
+	#about strong {
+		display: inline-block;
+		font-weight: 500;
+		line-height: 1.5rem;
+		text-shadow: 2px 1px var(--background-color),
+					-2px 1px var(--background-color);
+		border-bottom: 2px solid var(--primary-color);
+	}
 
 	/* Buttons style */
 
@@ -153,6 +153,8 @@ main {
 		cursor: pointer;
 	}
 
+	/* Demoreel button style */
+
 	#demoreel-button-en, #demoreel-button-fr {
 		color: var(--background-color);
 		background-color: var(--primary-color);
@@ -162,6 +164,7 @@ main {
 		background-color: var(--light-primary-color);
 	}
 
+	/* Resume button style */
 
 	#resume-button-en, #resume-button-fr {
 		background-color: var(--secondary-color);
@@ -171,10 +174,7 @@ main {
 		background-color: var(--light-secondary-color);
 	}
 
-
-/*
-**
-*/
+/* ************************************************************************** */
 
 /*
 ** Footer style
@@ -187,178 +187,142 @@ footer {
 	justify-content: space-between;
 }
 
-footer p {
-	font-size: 1.000rem;
-	font-weight: 400;
-}
+/* Socials style */
 
-footer p a {
-	display: inline-block;
-	font-weight: bold;
-}
+	footer p {
+		font-size: 1.000rem;
+		font-weight: 400;
+	}
 
-footer p a:hover {
-	color: var(--light-tertiary-color);
-}
+	footer p a {
+		display: inline-block;
+		font-weight: bold;
+	}
+
+	footer p a:hover {
+		color: var(--light-tertiary-color);
+	}
 
 /* Language picker style */
 
-	#language-picker {
-		width: 4.5rem;
-		font-size: 1.44rem;
-		font-weight: 500;
+	#translate-button {
 		display: flex;	
 		align-items: center;
 		justify-content: space-between;
+		width: 4.5rem;
 	}
 
-	#language-picker img {
-		margin-top: 0.125rem; 
-		height: 1.2rem;
-		box-shadow: 0 4px 16px 0 var(--shadow-color);
+	#translate-button span {
+		margin-top: 0.5rem;
 		cursor: pointer;
 	}
 
-/*
-** Container style
-*/
+	#translate-button span img {
+		height: 1.2rem;
+	}
 
-#container
-{
-	width: 100vw;
-	height: 100vh;
-	position: absolute;
-	background-color: var(--background-color);
-	z-index: -1;
-}
+/* ************************************************************************** */
 
 /*
-**
+** Resume style
 */
 
-/**/
-
-h2 {
-	font-size: 1.440rem;
-	font-weight: 500;
-	line-height: 1.5rem;
-	text-shadow: 2px 2px var(--background-color),
-				-2px 2px var(--background-color);
-	border-bottom: 2px solid var(--primary-color);
-	display: inline-block;
-}
-
-/*
-**
-*/
-
-#resume
-{
-	background-color: var(--background-color);
+#resume {
 	position: absolute;
 	top: 0;
 	right: 0;
-	transform: translateX(100%);
 	width: 42.5rem;
 	height: 100vh;
-	overflow: auto;
+	z-index: 1;
+	transform: translateX(100%);
 	box-shadow: 0rem 0rem 0rem 0rem var(--shadow-color);
+	overflow: auto;
 	transition: all 0.25s ease-in-out;
+	background-color: var(--background-color);
 }
 
 #resume article {
 	margin: 3.25rem 8.5rem 5.25rem 3.25rem;
 }
 
-#resume h2
-{
+h2 {
 	margin: 0.75rem 0rem 1.25rem 0rem;
-}
-
-#resume ol
-{
-	list-style-type: none;
-	line-height: 20px;
-	margin: 0rem 0rem 1.25rem 2rem;
-}
-
-#resume ol li
-{
-	list-style-type: none;
-	font-size: 1.25rem;
-	font-weight: 400;
-	margin-bottom: 0.75rem;
-}
-
-#resume ol li a
-{
-	font-size: 1.25rem;
-	font-weight: bold;
-}
-
-#resume ol li a strong
-{
-}
-
-#resume ol li a:hover strong
-{
-	color: var(--light-tertiary-color);
-}
-
-#resume ol li span
-{
-	font-size: 1rem;
-	font-weight: 400;
-}
-
-#resume ul
-{
-	list-style: none;
-	margin: 0rem 0rem 1.25rem 2rem;
-}
-
-#resume ul li
-{
-	list-style-type: none;
-	font-weight: 400;
-	margin-bottom: 0.5rem;
-}
-
-#resume ul li span
-{
-	font-size: 1.25rem;
 	display: inline-block;
-	width : 8.5rem;
-	font-weight: 400;
+	font-size: 1.440rem;
+	font-weight: 500;
+	line-height: 1.5rem;
+	text-shadow: 2px 2px var(--background-color),
+				-2px 2px var(--background-color);
+	border-bottom: 2px solid var(--primary-color);
 }
 
-#resume p
-{
-	display: block;
-	list-style: none;
-	font-size: 1.25rem;
-	font-weight: 400;
-	font-style: normal;
-	margin: 0rem 0rem 1.25rem 2rem;
-}
+	/* Employment and education style */
+
+	#resume ol {
+		margin: 0rem 0rem 1.25rem 2rem;
+		list-style-type: none;
+		line-height: 20px;
+	}
+
+	#resume ol li {
+		margin-bottom: 0.75rem;
+		font-size: 1.25rem;
+		font-weight: 400;
+		list-style-type: none;
+	}
+
+	#resume ol li a {
+		font-size: 1.25rem;
+		font-weight: bold;
+	}
+
+	#resume ol li a:hover strong {
+		color: var(--light-tertiary-color);
+	}
+
+	#resume ol li span {
+		font-size: 1rem;
+		font-weight: 400;
+	}
+
+	/* Knowledges style */
+
+	#resume ul {
+		margin: 0rem 0rem 1.25rem 2rem;
+		list-style: none;
+	}
+
+	#resume ul li {
+		margin-bottom: 0.5rem;
+		font-weight: 400;
+		list-style-type: none;
+	}
+
+	#resume ul li span {
+		display: inline-block;
+		width : 8.5rem;
+		font-size: 1.25rem;
+		font-weight: 400;
+	}
+
+	/* Clients and agences style */
+
+	#resume p {
+		margin: 0rem 0rem 1.25rem 2rem;
+		display: block;
+		list-style: none;
+		font-size: 1.25rem;
+		font-weight: 400;
+		font-style: normal;
+	}
+
+/* ************************************************************************** */
 
 /*
-**
+** Demoreel style
 */
 
-#opacity-filter {
-	position: absolute;
-	height: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;	
-	background-color: var(--shadow-color);
-	pointer-events: none;
-	opacity: 0;
-}
-
-#reel
-{
+#demoreel {
 	position: absolute;
 	transform: translateY(100%);
 	height: 0;
@@ -371,42 +335,72 @@ h2 {
 	justify-content: space-around;
 	transition: all 0.25s ease-in-out;
 	pointer-events: none;
+	z-index: 1;
 }
 
-#reel iframe {
-	height: 100%;
+#demoreel iframe {
 	margin: 3.5rem 8.5rem 5.25rem 8.25rem;
+	pointer-events: initial;
+	height: 100vh;
 }
 
+/* ************************************************************************** */
 
-.circular-button {
+/*
+** Interaction style
+*/
+
+#opacity-filter {
+	position: absolute;
+	height: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;	
+	opacity: 0;
+	background-color: var(--shadow-color);
+	pointer-events: none;
+}
+
+#close-button {
 	margin-top: 0.25rem;
+	position: absolute;
+	top: 3.25rem;
+	right: 5.25rem;
 	width: 2.25rem;
 	height: 2.25rem;
 	border-radius: 50%;
-	text-align: center;;
+	text-align: center;
 	line-height: 5.25rem;
 	font-size: 1.440rem;
 	font-weight: 500;
 	box-shadow: 0 4px 16px 0 var(--shadow-color);
-	z-index: 1;
+	z-index: 2;
 	cursor: pointer;
-	position: absolute;
-	top: 3.25rem;
-	right: 8.25rem;
 	overflow: hidden;
+	opacity: 0;
+	background-color: var(--secondary-color)
 }
 
-#close-button
-{
-	background-color: var(--secondary-color);
-	opacity: 0;
+/* ************************************************************************** */
+
+/*
+** Containe style
+*/
+
+#container {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+	background-color: var(--background-color);
 }
+
+/* ************************************************************************** */
+
+/*
+** French style
+*/
 
 .fr {
 	display: none;
-}
-
-.en {
-	display: initial;
 }

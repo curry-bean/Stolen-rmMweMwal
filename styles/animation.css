@@ -1,26 +1,44 @@
 /*
-**
+** Animation opacity in
 */
 
 @keyframes opacityIn {
 	from {
-		opacity: 0;
+		-webkit-opacity: 0;
+				opacity: 0;
 	}
 	to {
-		opacity: 1;
+		-webkit-opacity: 1;
+				opacity: 1;
 	}
 }
 
+/* ************************************************************************** */
+
+/*
+** Animation slide in
+*/
+
 @keyframes slideIn {
 	from {
-		opacity: 0;
-		transform: translateY(100%);
+		-webkit-opacity: 0;
+				opacity: 0;
+		-webkit-transform: translateY(100%);
+				transform: translateY(100%);
 	}
 	to {
-		opacity: 1;
-		transform: translateY(0%);
+		-webkit-opacity: 1;
+				opacity: 1;
+		-webkit-transform: translateY(0%);
+				transform: translateY(0%);
 	}
 }
+
+/* ************************************************************************** */
+
+/*
+** Animation name in
+*/
 
 h1 span {
 	display: inline-block;
@@ -32,12 +50,22 @@ h1 span {
 h1 strong {
 	display: inline-block;
 	transform: translateY(100%);
-	-webkit-animation: 0.5s ease-in-out 0.125s slideIn forwards;
-			animation: 0.5s ease-in-out 0.125s slideIn forwards;
+	-webkit-animation: 0.25s ease-in-out 0.25s slideIn forwards;
+			animation: 0.25s ease-in-out 0.25s slideIn forwards;
 }
 
-address, p, img{
+/*
+** Animation home in
+*/
+
+address, main, footer {
 	opacity: 0;
 	-webkit-animation: 0.5s ease-in-out 0.25s opacityIn forwards;
 			animation: 0.5s ease-in-out 0.25s opacityIn forwards;
+}
+
+#container {
+	opacity: 0;
+	-webkit-animation: 0.75s ease-in-out 0.25s opacityIn forwards;
+			animation: 0.75s ease-in-out 0.25s opacityIn forwards;
 }

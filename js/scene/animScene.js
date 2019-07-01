@@ -7,6 +7,22 @@ function animScene()
     // Get current frame
 
     requestAnimationFrame(animScene);
+    
+    if (width < 570)
+    {
+        // Rotate cylinder on Y axis
+
+        cylinder.rotation.x = 0;
+        cylinder.rotation.y += 0.00872;
+        cylinder.rotation.z = 0;
+    }
+    else
+    {
+        // Orient cylinder to look at target coordinates
+
+        cylinder.lookAt(target);
+    }
+
 
     // Change cylinder shadow geometry using the euler rotation matrix
 

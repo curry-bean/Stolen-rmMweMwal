@@ -1,23 +1,19 @@
 @media all and (max-width: 855px)
 {
+    /*
+    ** Root responsive
+    */
+
 	:root {
 		--debug-color: rgba(0, 255, 0, 0.0);
     }
+
+    /*
+    ** Header responsive
+    */
     
     header {
         margin: 3.25rem 5.25rem 2rem 5.25rem;
-    }
-
-    main {
-        margin: 0rem 5.25rem 0rem 5.25rem;
-    }
-
-    footer {
-        margin: 2rem 5.25rem 5.25rem 5.25rem;
-    }
-
-    #about {
-        margin-left: 0rem;
     }
 
     h1 {
@@ -38,9 +34,33 @@
         margin-bottom: 0.25rem;
     }
 
+    /*
+    ** Main responsive
+    */
+
+    main {
+        margin: 0rem 5.25rem 0rem 5.25rem;
+    }
+
+    #about {
+        margin-left: 0rem;
+    }
+
     #about br {
         display: none;
     }
+
+    /*
+    ** Footer responsive
+    */
+
+    footer {
+        margin: 2rem 5.25rem 5.25rem 5.25rem;
+    }
+
+    /*
+    ** Assets responsive
+    */
 
     #resume
     {
@@ -51,28 +71,46 @@
         margin: 3.25rem 5.25rem 5.25rem 5.25rem;
     }
 
-    #reel iframe {
+    #demoreel iframe {
         margin: 3.5rem 5.25rem 5.25rem 5.25rem;
     }
 
-    .circular-button {
-        right: 5.25rem;
+    #close-button {
+        right: 3.25rem;
     }
 }
 
+/* ************************************************************************** */
+
 @media all and (max-width: 570px)
 {
+    /*
+    ** Root responsive
+    */
+
 	:root {
 		--debug-color: rgba(0, 0, 255, 0.0);
     }
+
+    /*
+    ** Header responsive
+    */
 
     header {
         margin: 3.25rem 3.25rem 2rem 3.25rem;
     }
 
+    /*
+    ** Main responsive
+    */
+
     main {
         margin: 0rem 3.25rem 0rem 3.25rem;
     }
+
+    /*
+    ** Footer responsive
+    */
 
     footer {
         margin: 2rem 3.25rem 3.25rem 3.25rem;
@@ -82,23 +120,19 @@
         width: 100%;
     }
 
-    #language-picker {
+    #translate-button {
         margin-top: 0.25rem;
     }
 
-    #about {
-        margin-left: 0rem;
-    }
+    /*
+    ** Assets responsive
+    */
 
     #resume article {
         margin: 3.25rem 3.25rem 3.25rem 3.25rem;
     }
 
-    #reel iframe {
+    #demoreel iframe {
         margin: 3.5rem 3.25rem 5.25rem 3.25rem;
-    }
-
-    .circular-button {
-        right: 3.25rem;
     }
 }

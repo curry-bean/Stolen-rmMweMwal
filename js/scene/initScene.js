@@ -21,7 +21,8 @@ function initScene()
 {
     // Set an isometric camera
 
-    camera.position.set(400, 400 + 80, 400);
+    camera.position.set(400, 480, 400);
+
     camera.rotation.set(- halfPI / 2, - Math.atan(- 1 / Math.sqrt(2)), halfPI / 3);
     camera.zoom = 2;
 
