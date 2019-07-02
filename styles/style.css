@@ -11,7 +11,7 @@
 	--light-tertiary-color: #585858;
 	--background-color: #F5F5F5;
 	--shadow-color: rgba(16, 16, 16, 0.4);
-	--debug-color: rgba(255, 0, 0, 0.0);
+	--debug-color: rgba(255, 0, 0, 0.1);
 }
 
 /* ************************************************************************** */
@@ -40,6 +40,7 @@
 
 body {
 	min-height: 100vh;
+	min-width: 100vw;
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
@@ -350,7 +351,7 @@ h2 {
 ** Interaction style
 */
 
-#opacity-filter {
+#interactive-area {
 	position: absolute;
 	height: 0;
 	left: 0;
@@ -359,6 +360,7 @@ h2 {
 	opacity: 0;
 	background-color: var(--shadow-color);
 	pointer-events: none;
+	overflow: hidden;
 }
 
 #close-button {

@@ -10,7 +10,7 @@ var resumeButtonFr = document.getElementById("resume-button-fr");
 var demoreel = document.getElementById("demoreel");
 var resume = document.getElementById("resume");
 var closeButton = document.getElementById("close-button");
-var opacityFilter = document.getElementById("opacity-filter");
+var interactiveArea = document.getElementById("interactive-area");
 
 /*
 ** TODO
@@ -23,7 +23,7 @@ function interact()
     demoreelButtonFr.addEventListener("click", onDemoreelButtonClick);
     resumeButtonFr.addEventListener("click", onResumeButtonClick);
     closeButton.addEventListener("click", onCloseButtonClick);
-    opacityFilter.addEventListener("click", onCloseButtonClick);
+    interactiveArea.addEventListener("click", onCloseButtonClick);
 
     return ;
 }
@@ -39,8 +39,8 @@ function onResumeButtonClick()
     closeButton.style.pointerEvents = "initial";
     closeButton.style.opacity = "1";
     closeButton.style.lineHeight = "2.125rem";
-    opacityFilter.style.pointerEvents = "initial";
-    opacityFilter.style.opacity = "1";
+    interactiveArea.style.pointerEvents = "initial";
+    interactiveArea.style.opacity = "1";
 
     return ;
 }
@@ -55,8 +55,8 @@ function onDemoreelButtonClick()
     closeButton.style.pointerEvents = "initial";
     closeButton.style.opacity = "1";
     closeButton.style.lineHeight = "2.125rem";
-    opacityFilter.style.pointerEvents = "initial";
-    opacityFilter.style.opacity = "1";
+    interactiveArea.style.pointerEvents = "initial";
+    interactiveArea.style.opacity = "1";
 
     return ;
 }
@@ -73,8 +73,8 @@ function onCloseButtonClick()
     closeButton.style.pointerEvents = "none";
     closeButton.style.opacity = "0";
     closeButton.style.lineHeight = "5.25rem";
-    opacityFilter.style.pointerEvents = "none";
-    opacityFilter.style.opacity = "0";
+    interactiveArea.style.pointerEvents = "none";
+    interactiveArea.style.opacity = "0";
 
     setTimeout(function(){
         demoreel.innerHTML = "<iframe src=\"https://player.vimeo.com/video/236240897?color=FFFFFF&title=0&byline=0&portrait=0\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen></iframe>";
