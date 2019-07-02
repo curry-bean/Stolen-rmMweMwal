@@ -1,4 +1,4 @@
-@media all and (max-width: 1180px)
+@media all and (max-width: 1024px)
 {
     /*
     ** Root responsive
@@ -82,7 +82,7 @@
 
 /* ************************************************************************** */
 
-@media all and (max-width: 570px)
+@media all and (max-width: 720px)
 {
     /*
     ** Root responsive
