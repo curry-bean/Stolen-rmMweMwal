@@ -8,14 +8,12 @@ function animScene()
 
     requestAnimationFrame(animScene);
     
-    if (width < 570)
+    if (navigator.userAgent.match(/(android|iphone|ipad|blackberry|symbian|symbianos|symbos|netfront|model-orange|javaplatform|iemobile|windows phone|samsung|htc|opera mobile|opera mobi|opera mini|presto|huawei|blazer|bolt|doris|fennec|gobrowser|iris|maemo browser|mib|cldc|minimo|semc-browser|skyfire|teashark|teleca|uzard|uzardweb|meego|nokia|bb10|playbook)/gi))
     {
-        // Rotate cylinder on Y axis
-
         cylinder.rotation.x = 0;
         cylinder.rotation.y += 0.00872;
         cylinder.rotation.z = 0;
-    }
+    } 
     else
     {
         // Orient cylinder to look at target coordinates
