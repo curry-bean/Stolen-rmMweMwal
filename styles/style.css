@@ -84,7 +84,10 @@ header {
 		flex-wrap: wrap;
 		justify-content: space-between;
 		width: 22rem;
-		font-size: 1.000rem;
+	}
+
+	address span, address strong {
+		font-size: 1rem;
 	}
 
 	address strong a {
