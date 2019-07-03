@@ -5,7 +5,7 @@
     */
 
 	:root {
-		--debug-color: rgba(0, 255, 0, 0.1);
+		--debug-color: rgba(0, 255, 0, 0.0);
     }
 
     /*
@@ -32,6 +32,15 @@
     address span {
         width: 100%;
         margin-bottom: 0.25rem;
+    }
+
+    address strong {
+        width: 100%;
+    }
+
+    address strong a {
+        display: inline-block;
+        width: 100%;
     }
 
     /*
@@ -89,7 +98,7 @@
     */
 
 	:root {
-		--debug-color: rgba(0, 0, 255, 0.1);
+		--debug-color: rgba(0, 0, 255, 0.0);
     }
 
     /*
