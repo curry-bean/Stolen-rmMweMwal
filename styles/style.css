@@ -4,11 +4,11 @@
 
 :root {
 	--primary-color: #3C3CFF;
-	--light-primary-color: #4F4FFF;
+	--light-primary-color: #6D6DFF;
 	--secondary-color: #D3D3D3;
-	--light-secondary-color: #DCDCDC;
+	--light-secondary-color: #EDEDED;
 	--tertiary-color: #101010;
-	--light-tertiary-color: #585858;
+	--light-tertiary-color: #9B9B9B;
 	--background-color: #F5F5F5;
 	--shadow-color: rgba(16, 16, 16, 0.4);
 	--debug-color: rgba(255, 0, 0, 0.0);
@@ -115,7 +115,7 @@ main {
 
 	#about {
 		margin-left: 3.25rem;
-		max-width: 32.5rem;
+		max-width: 34.5rem;
 		font-size: 1.440rem;
 		font-weight: 500;
 	}
@@ -197,6 +197,7 @@ footer {
 	footer p a {
 		display: inline-block;
 		font-weight: bold;
+		color: var(--primary-color)
 	}
 
 	footer p a:hover {
@@ -219,6 +220,7 @@ footer {
 
 	#translate-button span img {
 		height: 1.2rem;
+		pointer-events: initial
 	}
 
 /* ************************************************************************** */
@@ -242,10 +244,32 @@ footer {
 }
 
 #resume article {
-	margin: 3.25rem 8.5rem 5.25rem 3.25rem;
+	margin: 3.875rem 8.5rem 5.25rem 3.25rem;
 }
 
-h2 {
+#resume article h1 {
+	margin-bottom: 2rem;
+	line-height: 1.5rem;
+	color: var(--tertiary-color);
+}
+
+#resume article h1 br {
+	display: none;
+}
+
+#resume article h1 span {
+	font-size: 1rem;
+	display: inline-block;
+	float: right;
+	color: var(--tertiary-color);
+}
+
+#resume article h1 span a {
+	font-size: 1rem;
+}
+
+
+#resume article h2 {
 	margin: 0.75rem 0rem 1.25rem 0rem;
 	display: inline-block;
 	font-size: 1.440rem;
@@ -258,47 +282,52 @@ h2 {
 
 	/* Employment and education style */
 
-	#resume ol {
+	#resume article ol {
 		margin: 0rem 0rem 1.25rem 2rem;
 		list-style-type: none;
 		line-height: 1.25rem;
 	}
 
-	#resume ol li {
+	#resume article ol li {
 		margin-bottom: 0.75rem;
 		font-size: 1.25rem;
 		font-weight: 400;
 		list-style-type: none;
 	}
 
-	#resume ol li a {
+	#resume article ol li a {
 		font-size: 1.25rem;
 		font-weight: bold;
+		color: var(--primary-color)
 	}
 
-	#resume ol li a:hover strong {
+	#resume article ol li a:hover {
 		color: var(--light-tertiary-color);
 	}
+	
+	#resume article ol li strong {
+		font-weight: 400;
+	}
 
-	#resume ol li span {
+	#resume article ol li span {
 		font-size: 1rem;
 		font-weight: 400;
 	}
 
 	/* Knowledges style */
 
-	#resume ul {
+	#resume article ul {
 		margin: 0rem 0rem 1.25rem 2rem;
 		list-style: none;
 	}
 
-	#resume ul li {
+	#resume article ul li {
 		margin-bottom: 0.5rem;
 		font-weight: 400;
 		list-style-type: none;
 	}
 
-	#resume ul li span {
+	#resume article ul li span {
 		display: inline-block;
 		width : 8.5rem;
 		font-size: 1.25rem;
@@ -307,7 +336,7 @@ h2 {
 
 	/* Clients and agences style */
 
-	#resume p {
+	#resume article p {
 		margin: 0rem 0rem 1.25rem 2rem;
 		display: block;
 		list-style: none;
@@ -315,6 +344,18 @@ h2 {
 		font-weight: 400;
 		font-style: normal;
 	}
+
+	#resume article a {
+		display: inline-block;
+		font-size: 1.25rem;
+		font-weight: bold;
+		color: var(--primary-color)
+	}
+
+	#resume article a:hover {
+		color: var(--light-tertiary-color);
+	}
+
 
 /* ************************************************************************** */
 
@@ -403,5 +444,15 @@ h2 {
 */
 
 .fr {
-	display: none;
+	visibility: hidden;
+	position: absolute;
+	left: -100vw;
+	transition: none;
+}
+
+.en {
+	visibility: visible;
+	position: inherit;
+	left: 0vw;
+	transition: none;
 }

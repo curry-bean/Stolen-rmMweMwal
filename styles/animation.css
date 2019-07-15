@@ -42,14 +42,20 @@
 
 h1 span {
 	display: inline-block;
-	transform: translateY(100%);
+	-webkit-opacity: 0;
+			opacity: 0;
+	-webkit-transform: translateY(100%);
+			transform: translateY(100%);
 	-webkit-animation: 0.5s ease-in-out 0.0s slideIn forwards;
 			animation: 0.5s ease-in-out 0.0s slideIn forwards;
 }
 
 h1 strong {
 	display: inline-block;
-	transform: translateY(100%);
+	-webkit-opacity: 0;
+			opacity: 0;
+	-webkit-transform: translateY(100%);
+			transform: translateY(100%);
 	-webkit-animation: 0.25s ease-in-out 0.25s slideIn forwards;
 			animation: 0.25s ease-in-out 0.25s slideIn forwards;
 }
@@ -59,13 +65,15 @@ h1 strong {
 */
 
 address, main, footer {
-	opacity: 0;
+	-webkit-opacity: 0;
+			opacity: 0;
 	-webkit-animation: 0.5s ease-in-out 0.25s opacityIn forwards;
 			animation: 0.5s ease-in-out 0.25s opacityIn forwards;
 }
 
 #container {
-	opacity: 0;
+	-webkit-opacity: 0;
+			opacity: 0;
 	-webkit-animation: 0.75s ease-in-out 0.25s opacityIn forwards;
 			animation: 0.75s ease-in-out 0.25s opacityIn forwards;
 }

@@ -39,13 +39,23 @@ function invertLanguage()
     {
         if (!isTranslated)
         {
-            englishClasses[i].style.display = "initial";
-            frenchClasses[i].style.display = "none";
+            englishClasses[i].style.visibility = "visible";
+            englishClasses[i].style.position = "inherit";
+            englishClasses[i].style.left = "0vw";
+
+            frenchClasses[i].style.visibility = "hidden";
+            frenchClasses[i].style.position = "absolute";
+            frenchClasses[i].style.left = "-100vw";
         }
         else
         {
-            englishClasses[i].style.display = "none";
-            frenchClasses[i].style.display = "initial";
+            englishClasses[i].style.visibility = "hidden";
+            englishClasses[i].style.position = "absolute";
+            englishClasses[i].style.left = "-100vw";
+            
+            frenchClasses[i].style.visibility = "visible";
+            frenchClasses[i].style.position = "inherit";
+            frenchClasses[i].style.left = "0vw";
         }
     }
 
