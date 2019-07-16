@@ -78,23 +78,27 @@ function onDemoreelButtonClick()
 
 function onCloseButtonClick()
 {
-    resumeOpen = false;
-    resume.style.transform = "translateX(100%)";
-    resume.style.boxShadow = "0rem 0rem 0rem 0rem var(--shadow-color)";
+    if (resumeOpen == true)
+    {
+        resumeOpen = false;
+        resume.style.transform = "translateX(100%)";
+        resume.style.boxShadow = "0rem 0rem 0rem 0rem var(--shadow-color)";
+    }
+    else if (demoreelOpen == true)
+    {
+        demoreelOpen = false;
+        demoreel.style.transform = "translateY(100%)";
+        setTimeout(function(){
+            demoreel.innerHTML = "<iframe src=\"https://player.vimeo.com/video/236240897?color=FFFFFF&title=0&byline=0&portrait=0\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen></iframe>";
+        }, 50);
+    }
 
-    demoreelOpen = false;
-    demoreel.style.transform = "translateY(100%)";
- 
     closeButton.style.pointerEvents = "none";
     closeButton.style.opacity = "0";
     closeButton.style.lineHeight = "5.25rem";
  
     interactiveArea.style.pointerEvents = "none";
     interactiveArea.style.opacity = "0";
-
-    setTimeout(function(){
-        demoreel.innerHTML = "<iframe src=\"https://player.vimeo.com/video/236240897?color=FFFFFF&title=0&byline=0&portrait=0\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen></iframe>";
-    }, 50);
 
     return ;
 }
