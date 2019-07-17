@@ -52,7 +52,7 @@
     }
 
     #about {
-        margin-left: 0rem;
+        margin-left: 2rem;
     }
 
     #about br {
@@ -135,6 +135,10 @@
 
     main {
         margin: 0rem 3.25rem 0rem 3.25rem;
+    }
+
+    #about {
+        margin-left: 0rem;
     }
 
     /*
